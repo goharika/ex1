@@ -20,8 +20,8 @@
                     success:function(){
                         that.item.each(function(m){
                             that.$('.list').append("<li>"+m.get("body.first") + " "+m.get("body.last")+"</li">)
-                        })
-                    },data:{}
+                        }
+                    }),data:{}
                 })
                       
             },createItem: function (){
