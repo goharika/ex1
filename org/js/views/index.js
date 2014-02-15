@@ -16,12 +16,14 @@
             render:function(){
                 var that       = this;
                 that.$el.html(this.home({}))
-               /* that.items.fetch({
+                that.items.fetch({
                     success:function(){
+                        that.item.each(function(m){
+                            that.$('.list').append("<li>"+m.get("body.first") + " "+m.get("body.last")+"</li">)
+                        });
                     },data:{}
                 })
-             */
-            
+                      
             },
             createItme: function (){
                 var that = this;
@@ -29,9 +31,9 @@
                     "first" : "bob",
                     "last" : "bilder"
                 }},{callback: function(json, m){
-                        that.$('.message').html("created" + m.get("body, first") + " " + m.get("body,last"))
+                        that.$('.message').html("created" + m.get("body.first") + " " + m.get("body.last"))
                 }
-            }});
+            });
         },
     });
 });
