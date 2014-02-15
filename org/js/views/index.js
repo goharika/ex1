@@ -26,7 +26,7 @@
                       
             },createItem: function (){
                 var that = this;
-                this.item.create({"path": "newjob", "title" : "I'm Bob", "group": "people", "body":{
+                this.items.create({"path": "newjob", "title" : "I'm Bob", "group": "people", "body":{
                     "first" : "bob",
                     "last" : "bilder"
                 }},{callback: function(json, m){
