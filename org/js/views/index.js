@@ -19,7 +19,7 @@
                 that.items.fetch({
                     success:function(){
                         that.items.each(function(m){
-                            that.$('.list').append("<li>"+m.get("body.first") + " "+m.get("body.last")+"</li>")
+                            that.listItem(m);
                         })
                     },data:{}
                 })
@@ -33,7 +33,11 @@
                         that.$('.message').html("created" + m.get("body.first") + " " + m.get("body.last"))
                 }
             });
-        },
+        }
+        , listItem:function(m){
+            if(this.$(".list li[data-id='"+m.id+"']").length ==0)
+                this.$('.list').append("<li>"+m.get("body.first") + " "+m.get("body.last")+"</li>")
+        }
     });
 });
 
