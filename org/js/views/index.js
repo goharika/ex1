@@ -11,7 +11,7 @@
                 that.render();
             },
             events: {
-                'click .create':'crateItem'
+                'click .create':'createItem'
             },
             render:function(){
                 var that       = this;
@@ -20,12 +20,11 @@
                     success:function(){
                         that.item.each(function(m){
                             that.$('.list').append("<li>"+m.get("body.first") + " "+m.get("body.last")+"</li">)
-                        });
+                        })
                     },data:{}
                 })
                       
-            },
-            createItme: function (){
+            },createItme: function (){
                 var that = this;
                 this.item.create({"path": "newjob", "title" : "I'm Bob", "group": "people", "body":{
                     "first" : "bob",
