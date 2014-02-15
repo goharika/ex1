@@ -11,7 +11,7 @@
                 that.render();
             },
             events: {
-                'click .create':'crateItme'
+                'click .create':'crateItem'
             },
             render:function(){
                 var that       = this;
@@ -30,7 +30,7 @@
                     "last" : "bilder"
                 }},{callback: function(json, m){
                         that.$('.message').html("created" + m.get("body, first") + " " + m.get("body,last"))
-                };
+                }
             }});
         },
     });
