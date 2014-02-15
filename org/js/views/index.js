@@ -28,7 +28,7 @@
                 this.item.create({"path": "newjob", "title" : "I'm Bob", "group": "people", "body":{
                     "first" : "bob",
                     "last" : "bilder"
-                }, {callback: function(json, m){
+                }},{callback: function(json, m){
                         that.$('.message').html("created" + m.get("body, first") + " " + m.get("body,last"))
                 };
             }});
