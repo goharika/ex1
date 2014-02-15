@@ -18,7 +18,7 @@
                 that.$el.html(this.home({}))
                 that.items.fetch({
                     success:function(){
-                        that.item.each(function(m){
+                        that.items.each(function(m){
                             that.$('.list').append("<li>"+m.get("body.first") + " "+m.get("body.last")+"</li>")
                         })
                     },data:{}
