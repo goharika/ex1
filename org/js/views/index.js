@@ -24,7 +24,7 @@
                     },data:{}
                 })
                       
-            },createItme: function (){
+            },createItem: function (){
                 var that = this;
                 this.item.create({"path": "newjob", "title" : "I'm Bob", "group": "people", "body":{
                     "first" : "bob",
